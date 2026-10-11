@@ -6,9 +6,9 @@ in a plugin made from this base: replace "what it is" with the plugin's own purp
 
 ## what it is
 
-starter repo for my tern terminal plugins. a new plugin starts as a plain copy or clone of this folder. my plugins share structure, install the standard tern way, and are ready to publish as open source.
+starter repo for tern terminal plugins. a new plugin starts as a plain copy or clone of this folder. plugins made from it share structure, install the standard tern way, and are ready to publish as open source.
 
-goal: run 5-50 plugins without friction. agents spend effort on features; i change params, check, and publish without thinking about the base.
+goal: one author runs 5-50 plugins without friction. agents spend effort on features; the author changes params, checks, and publishes without thinking about the base.
 
 it offers a usable default, not a framework. a plugin may delete any part or ignore the base completely.
 
@@ -20,7 +20,7 @@ keep it readable and maintainable for future contributors. code, tooling, and do
 - user config: defaults in code, optional user file overrides them
 - justfile: link, reload, types, test, lint, fmt, bump
 - offline check: optional `check.lua` with a fake `tern`, run by stock lua. it never shapes the plugin code: when the entry file needs luau-only features, delete the check and verify live
-- texts: `README.md` (what, install, config), `LICENSE`, `.agents/AGENTS.md`, this manifest
+- texts: `README.md` (what, install, config), `LICENSE`, `AGENTS.md`, this manifest
 - tern awareness: agent rules point to public tern docs (https://docs.stencil.so/tern/), `tern help`, generated api types
 
 ## key decisions
@@ -31,6 +31,7 @@ layout
 - copy, not dependency: nothing from this repo is loaded at run time, so plugins never break when the base changes
 - portable: runs wherever tern runs plugins (macos, linux, windows; window half also on ios). no owner-specific paths, nothing depends on files around the repo. paths from tern apis are fine
 - the example feature is tiny and lives in the entry file only. a new plugin replaces it; no example tests or docs to clean up
+- license: mit-0, so copies need no attribution
 
 code
 
